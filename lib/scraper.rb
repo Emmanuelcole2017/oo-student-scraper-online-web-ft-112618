@@ -47,6 +47,7 @@ class Scraper
     # :blog => .css("vitals=container")
     #.css("social-icon-container").css("a")[3]
     #.attribute("href").text
+    # :profile_quote =>
     binding.pry
   end
   
