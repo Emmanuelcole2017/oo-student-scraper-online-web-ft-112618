@@ -94,9 +94,9 @@ class Scraper
         .css(".vitals-container")
         .css(".vitals-text-container")
         .css(".profile-quote").text
-      
-      informationHash[]
-    binding.pry
+    }
+    informationHash
+    #binding.pry
   end
   
   
