@@ -27,7 +27,7 @@ class Scraper
                         profile_url: student.css("a").attribute("href").value}
     }
     studentHashes
-    binding.pry
+    #binding.pry
   end
 
   def self.scrape_profile_page(profile_url)
