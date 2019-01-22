@@ -17,7 +17,7 @@ class Scraper
     Nokogiri::HTML(open(index_url))
     # .css(".student-card")
     # :name => .css("h4").text
-    # :location =>
+    # :location => .css("p").text
     binding.pry
   end
 
