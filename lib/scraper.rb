@@ -57,6 +57,11 @@ class Scraper
                     .css(".vitals-container")
                     .css("a")
     
+    studentQuote = Nokogiri::HTML(open(profile_url))
+                    .css(".vitals-container")
+                    .css(".vitals-text-container")
+                    .css(".profile-quote").text
+    
     studentBio = Nokogiri::HTML(open(profile_url))
                   .css(".details-container")
                   .css(".bio-block.details-block")
@@ -82,6 +87,7 @@ class Scraper
       end
     }
     informationHash[:bio] = studentBio
+    informationHash[:profile_quote] = studentQuote
     informationHash
     #binding.pry
   end
