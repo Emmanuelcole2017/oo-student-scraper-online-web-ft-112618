@@ -66,7 +66,7 @@ class Scraper
     # Stores student information
     informationHash = {}
     
-    studentVitals each {|information|
+    studentVitals.each {|information|
       puts information
     }
     binding.pry
