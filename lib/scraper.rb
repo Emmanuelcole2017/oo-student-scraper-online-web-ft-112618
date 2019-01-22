@@ -77,7 +77,7 @@ class Scraper
     informationHash[:bio] = studentBio
     informationHash[:profile_quote] = studentQuote
     
-    informationHash
+    #informationHash
     #binding.pry
   end
   
