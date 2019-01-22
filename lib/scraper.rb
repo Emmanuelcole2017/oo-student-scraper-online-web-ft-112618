@@ -66,8 +66,8 @@ class Scraper
     # Stores student information
     informationHash = {}
     
-    studentVitals.each_with_index {|information, index|
-      puts information
+    studentVitals.each {|information|
+      puts information.attribute("href")
     }
     #binding.pry
   end
