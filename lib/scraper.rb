@@ -81,7 +81,7 @@ class Scraper
           .attribute("href").text
       end
     }
-    informationHash
+    informationHash[:bio] = studentBio
     #binding.pry
   end
   
