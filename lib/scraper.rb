@@ -77,11 +77,11 @@ class Scraper
         informationHash[:github] = information
           .attribute("href").text
       elsif(index == 3)
-        informationHash[:linkedin] = information
+        informationHash[:blog] = information
           .attribute("href").text
       end
-      puts information.attribute("href")
     }
+    informationHash
     #binding.pry
   end
   
