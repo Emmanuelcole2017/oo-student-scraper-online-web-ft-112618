@@ -10,6 +10,7 @@ class Scraper
   def self.scrape_profile_page(profile_url)
     
   end
-
+  
+  # Scraper #scrape_index_page is a class method that s
 end
 
