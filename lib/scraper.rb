@@ -34,7 +34,8 @@ class Scraper
   # student's profile page and returns a hash of attributes
   # describing an individual student
   def self.scrape_profile_page(profile_url)
-    
+    Nokogiri::HTML(open(profile_url))
+    binding.pry
   end
   
   
