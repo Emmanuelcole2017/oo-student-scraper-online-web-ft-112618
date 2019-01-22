@@ -15,6 +15,7 @@ class Scraper
     # {:name, :location, :profile}] from Nokogiri
     # using open-URI
     Nokogiri::HTML(open(index_url))
+    # .css(".student-card")
     binding.pry
   end
 
