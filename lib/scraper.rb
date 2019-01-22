@@ -82,6 +82,7 @@ class Scraper
       end
     }
     informationHash[:bio] = studentBio
+    informationHash
     #binding.pry
   end
   
