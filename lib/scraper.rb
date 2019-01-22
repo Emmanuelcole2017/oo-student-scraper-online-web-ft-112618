@@ -70,7 +70,7 @@ class Scraper
       puts information.attribute("href").text
     }
     informationHash
-    #binding.pry
+    binding.pry
   end
   
   
