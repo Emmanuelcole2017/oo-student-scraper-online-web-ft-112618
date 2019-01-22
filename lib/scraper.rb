@@ -35,19 +35,22 @@ class Scraper
   # describing an individual student
   def self.scrape_profile_page(profile_url)
     Nokogiri::HTML(open(profile_url))
-    # :twitter => .css("vitals=container")
+    # :twitter => .css("vitals-container")
     #.css("social-icon-container").css("a")[0]
     #.attribute("href").text
-    # :linkedin => .css("vitals=container")
+    # :linkedin => .css("vitals-container")
     #.css("social-icon-container").css("a")[1]
     #.attribute("href").text
-    # :github => .css("vitals=container")
+    # :github => .css("vitals-container")
     #.css("social-icon-container").css("a")[2]
     #.attribute("href").text
-    # :blog => .css("vitals=container")
+    # :blog => .css("vitals-container")
     #.css("social-icon-container").css("a")[3]
     #.attribute("href").text
-    # :profile_quote =>
+    # :profile_quote => .css(".vitals-container")
+    #.css(".vitals-text-container")
+    #.css(".profile-quote").text
+    # :bio => 
     binding.pry
   end
   
