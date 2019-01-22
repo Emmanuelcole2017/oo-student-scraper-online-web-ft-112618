@@ -63,8 +63,33 @@ class Scraper
     .attribute("href").text)
         informationHash[:twitter] =
           information.css("vitals-container")
-    .css("social-icon-container").css("a")[0]
-    .attribute("href").text
+          .css("social-icon-container").css("a")[0]
+          .attribute("href").text
+      end
+      if(information.css("vitals-container")
+    .css("social-icon-container").css("a")[1]
+    .attribute("href").text)
+        informationHash[:linkedin] =
+          information.css("vitals-container")
+          .css("social-icon-container").css("a")[1]
+          .attribute("href").text
+      end
+      if(information.css("vitals-container")
+    .css("social-icon-container").css("a")[2]
+    .attribute("href").text)
+        informationHash[:github] =
+          information.css("vitals-container")
+          .css("social-icon-container").css("a")[2]
+          .attribute("href").text
+      end
+      if(information.css("vitals-container")
+    .css("social-icon-container").css("a")[3]
+    .attribute("href").text)
+        informationHash[:twitter] =
+          information.css("vitals-container")
+          .css("social-icon-container").css("a")[3]
+          .attribute("href").text
+      end
     binding.pry
   end
   
