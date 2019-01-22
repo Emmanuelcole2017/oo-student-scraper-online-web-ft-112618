@@ -64,35 +64,7 @@ class Scraper
     # Stores student information
     informationHash = {}
     
-    studentVitals each {|information|
-      if(information.css("social-icon-container")
-        .css("a")[0].attribute("href").text)
-        informationHash[:twitter] =
-          information.css("social-icon-container")
-          .css("a")[0].attribute("href").text
-      end
-      if(information.css("social-icon-container")
-        .css("a")[1].attribute("href").text)
-        informationHash[:linkedin] =
-          information.css("social-icon-container")
-          .css("a")[1].attribute("href").text
-      end
-      if(information.css("social-icon-container")
-        .css("a")[2].attribute("href").text)
-        informationHash[:github] =
-          information.css("social-icon-container")
-          .css("a")[2].attribute("href").text
-      end
-      if(information.css("social-icon-container")
-        .css("a")[3].attribute("href").text)
-        informationHash[:blog] =
-          information.css("social-icon-container")
-          .css("a")[3].attribute("href").text
-      end
-      informationHash[:profile_quote] = information
-        .css(".vitals-text-container")
-        .css(".profile-quote").text
-    }
+    studentVitals each {
     informationHash
     #binding.pry
   end
