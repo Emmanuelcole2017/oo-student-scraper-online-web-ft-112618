@@ -61,7 +61,8 @@ class Scraper
       if(information.css("vitals-container")
     .css("social-icon-container").css("a")[0]
     .attribute("href").text)
-        informationHash[:]
+        informationHash[:twitter] =
+        
     binding.pry
   end
   
