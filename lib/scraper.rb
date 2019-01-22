@@ -66,9 +66,6 @@ class Scraper
     # Stores student information
     informationHash = {}
     
-    studentVitals each {|information|
-      puts information.attribute("href").text
-    }
     informationHash
     binding.pry
   end
