@@ -9,7 +9,11 @@ class Scraper
   # array of hashes in which each hash represents one student
   
   def self.scrape_index_page(index_url)
-    
+    # get index_url
+    # Nokogiri using open-uri
+    # returns [{:name, :location, :profile_url},
+    # {:name, :location, :profile}] from Nokogiri
+    # using open-URI
   end
 
   def self.scrape_profile_page(profile_url)
