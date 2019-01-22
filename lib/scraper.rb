@@ -36,6 +36,9 @@ class Scraper
   def self.scrape_profile_page(profile_url)
     Nokogiri::HTML(open(profile_url))
     # :twitter => .css("vitals=container")
+    #.css("social-icon-container").css("a")
+    #.attribute("href").text
+    # :linkedin
     binding.pry
   end
   
