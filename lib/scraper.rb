@@ -22,7 +22,11 @@ class Scraper
     # :location => .css("p").text
     # :profile_url => .css("a").attribute("href").value
     studentCards.each {|student|
-      
+      studentHashes << {name: student.css("h4").text,
+                        location: student.css("p").text,
+                        profile_url: student.css("a").attribute("href").value}
+    }
+    studentHashes
     binding.pry
   end
 
