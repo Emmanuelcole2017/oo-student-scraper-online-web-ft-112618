@@ -85,7 +85,7 @@ class Scraper
       if(information.css("vitals-container")
     .css("social-icon-container").css("a")[3]
     .attribute("href").text)
-        informationHash[:twitter] =
+        informationHash[:blog] =
           information.css("vitals-container")
           .css("social-icon-container").css("a")[3]
           .attribute("href").text
