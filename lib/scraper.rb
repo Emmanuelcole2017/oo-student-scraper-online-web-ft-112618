@@ -15,7 +15,8 @@ class Scraper
     # {:name, :location, :profile}] from Nokogiri
     # using open-URI
     # .css(".student-card")
-    studentCards = Nokogiri::HTML(open(index_url)).css(".student-card")
+    studentCards = Nokogiri::HTML(open(index_url))
+    .css(".student-card")
     studentHashes = []
     
     # :name => .css("h4").text
