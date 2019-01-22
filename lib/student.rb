@@ -24,7 +24,8 @@ class Student
     }
   end
   
-  
+  # #add_student_attributes uses the Scraper class to get a
+  # hash 
   def add_student_attributes(attributes_hash)
     
   end
