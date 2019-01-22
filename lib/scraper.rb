@@ -55,6 +55,12 @@ class Scraper
     studentVitals = Nokogiri::HTML(open(profile_url))
                     .css("vitals-container")
     
+    studentBio = Nokogiri::HTML(open(profile_url))
+                  .css(".details-container")
+                  .css(".bio-block.details-block")
+                  .css(".description-holder").css("p")
+                  .text
+                  
     # Stores student information
     informationHash = {}
     
@@ -67,28 +73,23 @@ class Scraper
       end
       if(information.css("social-icon-container")
         .css("a")[1].attribute("href").text)
-        informationHash[:twitter] =
+        informationHash[:linkedin] =
           information.css("social-icon-container")
           .css("a")[1].attribute("href").text
       end
-      if(information.css("vitals-container")
-    .css("social-icon-container").css("a")[2]
-    .attribute("href").text)
+      if(information.css("social-icon-container")
+        .css("a")[2].attribute("href").text)
         informationHash[:github] =
-          information.css("vitals-container")
-          .css("social-icon-container").css("a")[2]
-          .attribute("href").text
+          information.css("social-icon-container")
+          .css("a")[2].attribute("href").text
       end
-      if(information.css("vitals-container")
-    .css("social-icon-container").css("a")[3]
-    .attribute("href").text)
+      if(information.css("social-icon-container")
+        .css("a")[3].attribute("href").text)
         informationHash[:blog] =
-          information.css("vitals-container")
-          .css("social-icon-container").css("a")[3]
-          .attribute("href").text
+          information.css("social-icon-container")
+          .css("a")[3].attribute("href").text
       end
       informationHash[:profile_quote] = information
-        .css(".vitals-container")
         .css(".vitals-text-container")
         .css(".profile-quote").text
     }
