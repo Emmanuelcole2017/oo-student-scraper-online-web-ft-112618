@@ -8,7 +8,7 @@ class Student
   # student's attributes using the key/value pairs of that
   # hash.
   def initialize(student_hash)
-    student_hash.each {
+    student_hash.each {|key, value|
   end
 
   def self.create_from_collection(students_array)
