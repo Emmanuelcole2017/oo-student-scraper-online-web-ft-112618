@@ -59,17 +59,17 @@ class Scraper
     informationHash = {}
     
     studentVitals each {|information|
-      if(information.css("social-icon-container").css("a")[0].attribute("href").text)
+      if(information.css("social-icon-container")
+        .css("a")[0].attribute("href").text)
         informationHash[:twitter] =
-          information.css("social-icon-container").css("a")[0].attribute("href").text
+          information.css("social-icon-container")
+          .css("a")[0].attribute("href").text
       end
-      if(information.css("vitals-container")
-    .css("social-icon-container").css("a")[1]
-    .attribute("href").text)
-        informationHash[:linkedin] =
-          information.css("vitals-container")
-          .css("social-icon-container").css("a")[1]
-          .attribute("href").text
+      if(information.css("social-icon-container")
+        .css("a")[1].attribute("href").text)
+        informationHash[:twitter] =
+          information.css("social-icon-container")
+          .css("a")[1].attribute("href").text
       end
       if(information.css("vitals-container")
     .css("social-icon-container").css("a")[2]
