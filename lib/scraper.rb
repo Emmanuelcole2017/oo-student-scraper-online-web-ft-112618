@@ -16,11 +16,13 @@ class Scraper
     # using open-URI
     # .css(".student-card")
     studentCards = Nokogiri::HTML(open(index_url)).css(".student-card")
+    studentHashes = []
     
     # :name => .css("h4").text
     # :location => .css("p").text
     # :profile_url => .css("a").attribute("href").value
     studentCards.each {|student|
+      
     binding.pry
   end
 
