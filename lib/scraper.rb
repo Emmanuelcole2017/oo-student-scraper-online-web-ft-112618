@@ -33,7 +33,9 @@ class Scraper
 
   # #scrape_profile_page is a class method that scrapes a 
   # student's profile page and returns a hash of attributes
-  # describing an individual student
+  # describing an individual student.
+  # can handle profile pages without all of the social 
+  # links.
   def self.scrape_profile_page(profile_url)
     # :twitter => .css("vitals-container")
     #.css("social-icon-container").css("a")[0]
