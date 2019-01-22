@@ -20,7 +20,7 @@ class Scraper
     # :name => .css("h4").text
     # :location => .css("p").text
     # :profile_url => .css("a").attribute("href").value
-    studentCards.each {||
+    studentCards.each {|student|
     binding.pry
   end
 
