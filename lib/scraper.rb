@@ -11,6 +11,11 @@ class Scraper
     
   end
   
-  # Scraper #scrape_index_page is a class method that s
+  # Scraper #scrape_index_page is a class method that scrapes
+  # the student index page 
+  # ('./fixtures/sudent-site/index.html') and returns an 
+  # array of hashes in which each hash represents one student
+  
+  def scrape_index_page
 end
 
