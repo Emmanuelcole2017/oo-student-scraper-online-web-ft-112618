@@ -52,19 +52,16 @@ class Scraper
     # :bio => .css(".details-container")
     # .css(".bio-block.details-block")
     # .css(".description-holder").css("p").text
-    studentDescription = Nokogiri::HTML(open(profile_url))
+    studentVitals = Nokogiri::HTML(open(profile_url))
+                    .css("vitals-container")
     
     # Stores student information
     informationHash = {}
     
-    studentDescription each {|information|
-      if(information.css("vitals-container")
-    .css("social-icon-container").css("a")[0]
-    .attribute("href").text)
+    studentVitals each {|information|
+      if(information.css("social-icon-container").css("a")[0].attribute("href").text)
         informationHash[:twitter] =
-          information.css("vitals-container")
-          .css("social-icon-container").css("a")[0]
-          .attribute("href").text
+          information.css("social-icon-container").css("a")[0].attribute("href").text
       end
       if(information.css("vitals-container")
     .css("social-icon-container").css("a")[1]
