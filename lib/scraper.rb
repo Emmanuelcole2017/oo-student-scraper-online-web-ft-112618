@@ -90,6 +90,7 @@ class Scraper
           .css("social-icon-container").css("a")[3]
           .attribute("href").text
       end
+      
     binding.pry
   end
   
