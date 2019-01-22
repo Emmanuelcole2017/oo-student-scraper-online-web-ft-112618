@@ -86,7 +86,7 @@ class Scraper
           .include? "github")
         informationHash[:github] =
         information.attribute("href").text
-      else
+      elsif (information.attribute("href").text != "")
         informationHash[:blog] =
         information.attribute("href").text
       end
