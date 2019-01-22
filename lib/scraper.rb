@@ -74,7 +74,20 @@ class Scraper
     studentVitals.each {|information|
       puts 
       if (information.attribute("href").text
+          .include? "twitter")
+        informationHash[:twitter] =
+        information.attribute("href").text
+      elsif (information.attribute("href").text
+          .include? "linkedin")
+        informationHash[:linkedin] =
+        information.attribute("href").text
+      elsif (information.attribute("href").text
           .include? "github")
+        informationHash[:github] =
+        information.attribute("href").text
+      else
+        informationHash[:github] =
+        information.attribute("href").text
     }
     #informationHash[:bio] = studentBio
     #informationHash[:profile_quote] = studentQuote
