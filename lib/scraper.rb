@@ -72,7 +72,6 @@ class Scraper
     informationHash = {}
     
     studentVitals.each {|information|
-      puts 
       if (information.attribute("href").text
           .include? "twitter")
         informationHash[:twitter] =
