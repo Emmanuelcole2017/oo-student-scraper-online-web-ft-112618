@@ -3,7 +3,9 @@ class Student
   attr_accessor :name, :location, :twitter, :linkedin, :github, :blog, :profile_quote, :bio, :profile_url 
 
   @@all = []
-
+  
+  # #new takes in an argument of a hash and sets that new 
+  # student's
   def initialize(student_hash)
     student_hash.each {
   end
