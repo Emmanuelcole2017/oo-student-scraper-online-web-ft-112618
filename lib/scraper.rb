@@ -72,7 +72,7 @@ class Scraper
     informationHash = {}
     
     studentVitals.each {|information|
-      puts information.attribute("href").include?
+      puts information.attribute("href").text.include? "twitter"
     }
     #informationHash[:bio] = studentBio
     #informationHash[:profile_quote] = studentQuote
