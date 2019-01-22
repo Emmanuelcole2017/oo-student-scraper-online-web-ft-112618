@@ -86,13 +86,14 @@ class Scraper
         informationHash[:github] =
         information.attribute("href").text
       else
-        informationHash[:github] =
+        informationHash[:blog] =
         information.attribute("href").text
+      end
     }
-    #informationHash[:bio] = studentBio
-    #informationHash[:profile_quote] = studentQuote
+    informationHash[:bio] = studentBio
+    informationHash[:profile_quote] = studentQuote
     
-    #informationHash
+    informationHash
     #binding.pry
   end
   
