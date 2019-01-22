@@ -18,7 +18,7 @@ class Scraper
     # .css(".student-card")
     # :name => .css("h4").text
     # :location => .css("p").
-    # :profile_url => .css()
+    # :profile_url => .css("a")
     binding.pry
   end
 
