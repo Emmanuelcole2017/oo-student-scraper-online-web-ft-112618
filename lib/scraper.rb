@@ -54,6 +54,7 @@ class Scraper
     # .css(".description-holder").css("p").text
     studentVitals = Nokogiri::HTML(open(profile_url))
                     .css("vitals-container")
+                    .css("a")
     
     studentBio = Nokogiri::HTML(open(profile_url))
                   .css(".details-container")
