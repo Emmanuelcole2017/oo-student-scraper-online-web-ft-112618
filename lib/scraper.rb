@@ -90,7 +90,12 @@ class Scraper
           .css("social-icon-container").css("a")[3]
           .attribute("href").text
       end
+      informationHash[:profile_quote] = information
+        .css(".vitals-container")
+        .css(".vitals-text-container")
+        .css(".profile-quote").text
       
+      informationHash[]
     binding.pry
   end
   
