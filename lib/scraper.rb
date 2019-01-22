@@ -50,7 +50,9 @@ class Scraper
     # :profile_quote => .css(".vitals-container")
     #.css(".vitals-text-container")
     #.css(".profile-quote").text
-    # :bio => 
+    # :bio => .css(".details-container")
+    # .css(".bio-block.details-block")
+    # .css(".description-holder").css("p").text
     binding.pry
   end
   
