@@ -31,7 +31,8 @@ class Student
     attributes_hash.each {|key, value| self.send(("#{key}="), value)
     }
   end
-
+  
+  # .all returns the class variable @@all
   def self.all
     @@all
   end
