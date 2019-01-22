@@ -14,11 +14,13 @@ class Scraper
     # returns [{:name, :location, :profile_url},
     # {:name, :location, :profile}] from Nokogiri
     # using open-URI
-    studentCards = Nokogiri::HTML(open(index_url)).css(".student-card")
     # .css(".student-card")
+    studentCards = Nokogiri::HTML(open(index_url)).css(".student-card")
+    
     # :name => .css("h4").text
-    # :location => .css("p").
+    # :location => .css("p").text
     # :profile_url => .css("a").attribute("href").value
+    studentCards.each {||
     binding.pry
   end
 
