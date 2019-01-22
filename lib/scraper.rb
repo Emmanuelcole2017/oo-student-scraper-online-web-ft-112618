@@ -71,20 +71,8 @@ class Scraper
     # Stores student information
     informationHash = {}
     
-    studentVitals.each_with_index {|information, index|
-      if(index == 0)
-        informationHash[:twitter] = information
-          .attribute("href").text
-      elsif(index == 1)
-        informationHash[:linkedin] = information
-          .attribute("href").text
-      elsif(index == 2)
-        informationHash[:github] = information
-          .attribute("href").text
-      elsif(index == 3)
-        informationHash[:blog] = information
-          .attribute("href").text
-      end
+    studentVitals.each {|information|
+      
     }
     informationHash[:bio] = studentBio
     informationHash[:profile_quote] = studentQuote
