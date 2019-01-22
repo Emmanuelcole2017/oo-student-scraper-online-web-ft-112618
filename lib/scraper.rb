@@ -62,7 +62,9 @@ class Scraper
     .css("social-icon-container").css("a")[0]
     .attribute("href").text)
         informationHash[:twitter] =
-        
+          information.css("vitals-container")
+    .css("social-icon-container").css("a")[0]
+    .attribute("href").text
     binding.pry
   end
   
