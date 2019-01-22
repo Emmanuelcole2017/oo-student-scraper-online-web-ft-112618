@@ -15,7 +15,7 @@ class Scraper
     # {:name, :location, :profile}] from Nokogiri
     # using open-URI
     Nokogiri::HTML(open(index_url))
-    
+    binding.pry
   end
 
   def self.scrape_profile_page(profile_url)
